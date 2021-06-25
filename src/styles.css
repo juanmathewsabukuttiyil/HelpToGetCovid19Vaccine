@@ -1,0 +1,413 @@
+.dataCardSec {
+    width: 100%;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: 'Overpass', sans-serif;
+    letter-spacing: 0px;
+    font-size: 17px;
+    color: #8d8f90;
+    font-weight: 400;
+    line-height: 32px;
+    background-color: #edefef;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #25292a;
+    margin: 0px 0px 10px 0px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 38px;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 32px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 17px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+}
+
+    p:last-child {
+        margin: 0px;
+    }
+
+ul, ol {
+}
+
+a {
+    text-decoration: none;
+    color: #8d8f90;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+    a:focus, a:hover {
+        text-decoration: none;
+        color: #f85759;
+    }
+
+.page-header {
+    margin-top: unset;
+    background: url(images/pageheader.jpg)no-repeat;
+    position: relative;
+    background-size: cover;
+}
+
+.page-caption {
+    padding-top: 170px;
+    padding-bottom: 174px;
+}
+
+.page-sub-title {
+    font-size: 20px;
+    line-height: 0;
+    color: #d4d4d4;
+    font-weight: 600;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 46px;
+    line-height: 1;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-section {
+    position: relative;
+    bottom: 60px;
+}
+
+.card-block {
+    padding: 80px;
+    margin-top: -45px;
+    padding-bottom: 40px !important;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+html {
+    font-size: 14px;
+}
+
+.container {
+    font-size: 14px;
+    color: #666666;
+    font-family: "Open Sans";
+}
+
+.card-custom {
+    overflow: hidden;
+    min-height: 450px;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+    background-image: url(images/background.jpg);
+    height: 200px;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-color: inherit;
+}
+
+    /* First border-left-width setting is a fallback */
+    .card-custom-img::after {
+        position: absolute;
+        content: '';
+        top: 161px;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-top-width: 40px;
+        border-right-width: 0;
+        border-bottom-width: 0;
+        border-left-width: 545px;
+        border-left-width: calc(575px - 5vw);
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: inherit;
+    }
+
+.card-custom-avatar img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    position: absolute;
+    top: 100px;
+    left: 1.25rem;
+    width: 100px;
+    height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-block {
+        padding: 30px !important;
+    }
+
+    .vaccineCard {
+        padding-left: unset;
+        padding-right: unset;
+    }
+
+    .diffToggle {
+        font-size: 11px;
+    }
+
+    .page-sub-title {
+        font-size: 15px !important;
+    }
+}
+
+.tab-content {
+    margin-top: 40px;
+}
+
+.txtStyle {
+    height: 50px !important;
+    width: 100%;
+    appearance: none;
+}
+
+.section-title {
+    margin-bottom: 25px !important;
+}
+
+.diffToggle {
+    font-weight: 1000;
+}
+
+.scheduler {
+    height: 122px;
+    width: 100%;
+    text-align: -webkit-center;
+}
+
+.vaccineCard {
+    margin-bottom: 12px;
+}
+
+
+
+.base-timer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+    .base-timer__path-remaining.green {
+        color: rgb(65, 184, 131);
+    }
+
+    .base-timer__path-remaining.orange {
+        color: orange;
+    }
+
+    .base-timer__path-remaining.red {
+        color: red;
+    }
+
+.base-timer__label {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.base-timer__label_time {
+    top: -18px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.base-timer__label_found {
+    font-style: italic;
+    top: 2px;
+    font-size: 11px;
+}
+
+.base-timer__label_attempt {
+    top: 23px;
+    font-size: 11px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.freeText {
+    display: inline-flex;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.card-text {
+    margin: unset;
+}
+
+.card-text-address {
+    font-size: 13px;
+}
+
+.priceTabOutter {
+    padding: 5px 0px;
+}
+
+.priceTab {
+    WIDTH: 32%;
+    display: inline-block;
+}
+
+.vaccineNameForPrice {
+    letter-spacing: 1px;
+    background: #d65a5a;
+    font-size: 8PX;
+    padding-left: 8PX;
+    padding-right: 8px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.vaccinePrice {
+    border: 1px #efefef solid;
+    font-size: 14PX;
+    box-shadow: black;
+    color: #223a52;
+    padding: 0px;
+    box-shadow: khaki;
+    font-weight: bold;
+    TEXT-ALIGN: center;
+}
+
+.text-center {
+    margin-top: 12px;
+}
+
+.sessionOutter {
+    padding: 5px 0px;
+    border-bottom: 1px #efefef solid;
+    width:100%;
+    text-align: center;
+}
+
+.sessionAvaliablityOutter {
+    WIDTH: 23%;
+    display: inline-block;
+}
+
+.vaccineNameForSession {
+    letter-spacing: 1px;
+    background: #fff;
+    font-size: 7PX;
+    padding-left: 0PX;
+    padding-right: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    font-weight: bold;
+    color: #25292a;
+    text-align: center;
+    border: 1px double khaki;
+}
+
+.vaccineDateForSession {
+    border: 1px #efefef solid;
+    font-size: 9PX;
+    box-shadow: black;
+    color: #223a52;
+    padding: 0px;
+    box-shadow: khaki;
+    font-weight: bold;
+    TEXT-ALIGN: center;
+    background: khaki
+}
+
+.f-12 {
+    font-size: 11px !important;
+}
+
+.card-footer {
+    border-top: 1px #f9f9f9 solid !important;
+}

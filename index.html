@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Help To Get Covid'19 Vaccine, Juan's Initiative</title>
+</head>
+<body>
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="page-caption">
+                        <h1 class="page-title">HELP TO GET COVID'19 VACCINE</h1>
+                        <p class="page-sub-title">Find available slots & get instant alerts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-section">
+        <div class="container">
+            <div class="card-block bg-white mb30">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="section-title mb-0">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary d-none" id="modalButton" data-toggle="modal" data-target="#exampleModalCenter">
+                                Launch demo modal
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Message</h5>
+                                        </div>
+                                        <div class="modal-body" id="errorMessageSec">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2>Real-time data from Co-WIN app to book vaccination appointments</h2>
+                            <p>Users will be notified when COVID-19 vaccination slots open up. The APP is tracking all the available vaccine slots across the country in real-time.</p>
+                        </div>
+                        <ul class="nav nav-tabs diffToggle">
+                            <li class="active"><a data-toggle="tab" href="#home">Search By PIN</a></li>
+                            <li><a data-toggle="tab" href="#menu1">Search By District</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input type="number" class="form-control txtStyle" placeholder="Enter Your PIN" id="pincodeInput" />
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <button onclick="getAvailability(true)" id="searchButton" type="button" class="btn btn-primary txtStyle"><strong>Search</strong></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="menu1" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="col-md-4 form-group">
+                                        <select id="states" class="form-control txtStyle" onchange=getDistricts()>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <select id="district" class="form-control txtStyle">
+                                            <option selected>Select District</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <button onclick="getAvailability(false)" id="searchButton" type="button" class="btn btn-primary txtStyle"><strong>Search</strong></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scheduler" id="appSec">
+                        <div id="app"></div>
+                    </div>
+                    <div class="row pt-5 m-auto dataCardSec" id="data">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                    <a href="https://www.google.com/search?q=juan+mathew+sabu&oq=juan+mathew+sabu&aqs=chrome..69i57j69i60l3.4456j0j7&sourceid=chrome&ie=UTF-8" target="_blank">Developed by Juan</a>
+                    <a href="https://www.facebook.com/juan.mathewsabu/" target="_blank" class="fa fa-facebook-square"></a>
+                    <a href="https://www.instagram.com/juan.mathewsabu/" target="_blank" class="fa fa-instagram"></a>
+                    <a href="https://www.linkedin.com/in/juan-mathew-sabu-010441130/" target="_blank" class="fa fa-linkedin"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="src/script.js"></script>
+    <link rel="stylesheet" href="src/styles.css">
+</body>
+</html>
+
