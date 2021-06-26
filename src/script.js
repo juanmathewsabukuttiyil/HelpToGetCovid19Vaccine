@@ -163,7 +163,7 @@
                 function (response) {
         let avaliableCenterDatas = "";
                     let centerDatas = "";
-                    if (response?.centers?.length > 0) {
+                    if (response.centers != undefined && response.centers.length > 0) {
         let availabilityFound = false;
                         response.centers.forEach(center => {
         let availabilityFoundTemp = false;
@@ -285,7 +285,7 @@
 
     function getVaccineAndFee(vaccine_fees) {
         var vaccineFeeResult = "";
-        if (vaccine_fees?.length > 0) {
+        if (vaccine_fees != undefined && vaccine_fees.length > 0) {
         vaccine_fees.forEach(obj => {
             vaccineFeeResult += `              
                       <div class="priceTab">
@@ -300,7 +300,7 @@
 
     function getSessions(sessions) {
         var sessionsData = "";
-        if (sessions?.length > 0) {
+        if (sessions != undefined && sessions.length > 0) {
         sessions.forEach(session => {
             if (session.available_capacity > 0) {
                 sessionsData += `
@@ -332,7 +332,7 @@
     function getSlots(session) {
         var slotsData = "";
 
-        if (session?.slots?.length > 0 && session.available_capacity > 0) {
+        if (session.slots != undefined && session.slots.length > 0 && session.available_capacity > 0) {
         slotsData +=
         `
                     <span>Date : ${session.date}</span>
@@ -358,7 +358,7 @@
         }).done(
             function (response) {
         let districtsOptionsHTML = "<option selected>Select District</option>";
-                if (response?.districts?.length > 0) {
+                if (response.districts != undefined && response.districts.length > 0) {
         response.districts.forEach(element => {
             districtsOptionsHTML += `
                     <option value="${element.district_id}"> ${element.district_name} </option>`
@@ -383,7 +383,7 @@
         }).done(
             function (response) {
                 let statesOptionsHTML = "<option selected> Select State </option> ";
-                if (response?.states?.length > 0) {
+                if (response.states != undefined && response.states.length > 0) {
                     response.states.forEach(element => {
                         statesOptionsHTML += `
                     <option value="${element.state_id}"> ${element.state_name} </option>`
